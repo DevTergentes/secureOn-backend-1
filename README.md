@@ -15,4 +15,24 @@ It provides a secure, RESTful API for the ChemTrack Web and Mobile apps to inter
 - **API Architecture**: RESTful (OpenAPI v3 compatible)
 - **Hosting**: AWS / Heroku / Railway *(as applicable)*
 
+---
 
+## 📦 Features
+
+- ✅ User registration & authentication (JWT)
+- ✅ Role-based access control (Admin, Lab Tech, Researcher)
+- ✅ Manage chemical entries and metadata
+- ✅ Track quantities, usage logs, expiration alerts
+- ✅ Upload and link Safety Data Sheets (PDFs)
+- ✅ Audit logs for chemical handling
+- ✅ Integration-ready for ChemTrack mobile/web clients
+
+---
+
+## 🚀 Getting Started
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/your-username/chemtrack-backend.git
+cd chemtrack-backend
