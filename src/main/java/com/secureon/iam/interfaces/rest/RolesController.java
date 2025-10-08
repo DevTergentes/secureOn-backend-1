@@ -1,9 +1,9 @@
 package com.secureon.iam.interfaces.rest;
 
-import com.backend.hormonalcare.iam.domain.model.queries.GetAllRolesQuery;
-import com.backend.hormonalcare.iam.domain.services.RoleQueryService;
-import com.backend.hormonalcare.iam.interfaces.rest.resources.RoleResource;
-import com.backend.hormonalcare.iam.interfaces.rest.transform.RoleResourceFromEntityAssembler;
+import com.secureon.iam.domain.model.queries.GetAllRolesQuery;
+import com.secureon.iam.domain.services.RoleQueryService;
+import com.secureon.iam.interfaces.rest.resources.RoleResource;
+import com.secureon.iam.interfaces.rest.transform.RoleResourceFromEntityAssembler;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;

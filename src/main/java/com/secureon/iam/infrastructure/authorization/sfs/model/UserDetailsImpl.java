@@ -1,6 +1,6 @@
 package com.secureon.iam.infrastructure.authorization.sfs.model;
 
-import com.backend.hormonalcare.iam.domain.model.aggregates.User;
+import com.secureon.iam.domain.model.aggregates.User;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
