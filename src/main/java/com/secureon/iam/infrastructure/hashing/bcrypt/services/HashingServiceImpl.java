@@ -1,6 +1,6 @@
 package com.secureon.iam.infrastructure.hashing.bcrypt.services;
 
-import com.backend.hormonalcare.iam.infrastructure.hashing.bcrypt.BCryptHashingService;
+import com.secureon.iam.infrastructure.hashing.bcrypt.BCryptHashingService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 

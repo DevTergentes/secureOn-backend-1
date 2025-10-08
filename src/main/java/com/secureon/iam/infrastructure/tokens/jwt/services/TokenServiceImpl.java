@@ -1,6 +1,6 @@
 package com.secureon.iam.infrastructure.tokens.jwt.services;
 
-import com.backend.hormonalcare.iam.infrastructure.tokens.jwt.BearerTokenService;
+import com.secureon.iam.infrastructure.tokens.jwt.BearerTokenService;
 import io.jsonwebtoken.*;
 import io.jsonwebtoken.security.Keys;
 import io.jsonwebtoken.security.SignatureException;

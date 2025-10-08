@@ -1,14 +1,14 @@
 package com.secureon.iam.interfaces.rest;
 
-import com.backend.hormonalcare.iam.domain.services.UserCommandService;
-import com.backend.hormonalcare.iam.interfaces.rest.resources.AuthenticatedUserResource;
-import com.backend.hormonalcare.iam.interfaces.rest.resources.SignInResource;
-import com.backend.hormonalcare.iam.interfaces.rest.resources.SignUpResource;
-import com.backend.hormonalcare.iam.interfaces.rest.resources.UserResource;
-import com.backend.hormonalcare.iam.interfaces.rest.transform.AuthenticatedUserResourceFromEntityAssembler;
-import com.backend.hormonalcare.iam.interfaces.rest.transform.SignInCommandFromResourceAssembler;
-import com.backend.hormonalcare.iam.interfaces.rest.transform.SignUpCommandFromResourceAssembler;
-import com.backend.hormonalcare.iam.interfaces.rest.transform.UserResourceFromEntityAssembler;
+import com.secureon.iam.domain.services.UserCommandService;
+import com.secureon.iam.interfaces.rest.resources.AuthenticatedUserResource;
+import com.secureon.iam.interfaces.rest.resources.SignInResource;
+import com.secureon.iam.interfaces.rest.resources.SignUpResource;
+import com.secureon.iam.interfaces.rest.resources.UserResource;
+import com.secureon.iam.interfaces.rest.transform.AuthenticatedUserResourceFromEntityAssembler;
+import com.secureon.iam.interfaces.rest.transform.SignInCommandFromResourceAssembler;
+import com.secureon.iam.interfaces.rest.transform.SignUpCommandFromResourceAssembler;
+import com.secureon.iam.interfaces.rest.transform.UserResourceFromEntityAssembler;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -32,7 +32,8 @@ public class AuthenticationController {
     public ResponseEntity<UserResource> signUp(@RequestBody SignUpResource resource) {
         var signUpCommand = SignUpCommandFromResourceAssembler.toCommandFromResource(resource);
         var user = userCommandService.handle(signUpCommand);
-        if (user.isEmpty()) return ResponseEntity.badRequest().build();
+        if (user.isEmpty())
+            return ResponseEntity.badRequest().build();
         var userResource = UserResourceFromEntityAssembler.toResourceFromEntity(user.get());
         return new ResponseEntity<>(userResource, HttpStatus.CREATED);
     }
@@ -41,11 +42,13 @@ public class AuthenticationController {
     public ResponseEntity<AuthenticatedUserResource> signIn(@RequestBody SignInResource resource) {
         var signInCommand = SignInCommandFromResourceAssembler.toCommandFromResource(resource);
         var authenticatedUser = userCommandService.handle(signInCommand);
-        if (authenticatedUser.isEmpty()) return ResponseEntity.notFound().build();
+        if (authenticatedUser.isEmpty())
+            return ResponseEntity.notFound().build();
         var user = authenticatedUser.get().getLeft();
         var token = authenticatedUser.get().getRight();
         var role = user.getRole(); // Use getRole() method
-        var authenticatedUserResource = AuthenticatedUserResourceFromEntityAssembler.toResourceFromEntity(user, token, role);
+        var authenticatedUserResource = AuthenticatedUserResourceFromEntityAssembler.toResourceFromEntity(user, token,
+                role);
         return ResponseEntity.ok(authenticatedUserResource);
     }
 }

@@ -1,11 +1,11 @@
 package com.secureon.iam.interfaces.acl;
 
-import com.backend.hormonalcare.iam.domain.model.commands.SignUpCommand;
-import com.backend.hormonalcare.iam.domain.model.entities.Role;
-import com.backend.hormonalcare.iam.domain.model.queries.GetUserByIdQuery;
-import com.backend.hormonalcare.iam.domain.model.queries.GetUserByUsernameQuery;
-import com.backend.hormonalcare.iam.domain.services.UserCommandService;
-import com.backend.hormonalcare.iam.domain.services.UserQueryService;
+import com.secureon.iam.domain.model.commands.SignUpCommand;
+import com.secureon.iam.domain.model.entities.Role;
+import com.secureon.iam.domain.model.queries.GetUserByIdQuery;
+import com.secureon.iam.domain.model.queries.GetUserByUsernameQuery;
+import com.secureon.iam.domain.services.UserCommandService;
+import com.secureon.iam.domain.services.UserQueryService;
 import org.apache.logging.log4j.util.Strings;
 
 import java.util.ArrayList;

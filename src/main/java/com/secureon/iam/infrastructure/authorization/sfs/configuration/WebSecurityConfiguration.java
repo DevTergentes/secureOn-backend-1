@@ -1,8 +1,8 @@
 package com.secureon.iam.infrastructure.authorization.sfs.configuration;
 
-import com.backend.hormonalcare.iam.infrastructure.authorization.sfs.pipeline.BearerAuthorizationRequestFilter;
-import com.backend.hormonalcare.iam.infrastructure.hashing.bcrypt.BCryptHashingService;
-import com.backend.hormonalcare.iam.infrastructure.tokens.jwt.BearerTokenService;
+import com.secureon.iam.infrastructure.authorization.sfs.pipeline.BearerAuthorizationRequestFilter;
+import com.secureon.iam.infrastructure.hashing.bcrypt.BCryptHashingService;
+import com.secureon.iam.infrastructure.tokens.jwt.BearerTokenService;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

@@ -1,10 +1,10 @@
 package com.secureon.iam.interfaces.rest;
 
-import com.backend.hormonalcare.iam.domain.model.queries.GetAllUsersQuery;
-import com.backend.hormonalcare.iam.domain.model.queries.GetUserByIdQuery;
-import com.backend.hormonalcare.iam.domain.services.UserQueryService;
-import com.backend.hormonalcare.iam.interfaces.rest.resources.UserResource;
-import com.backend.hormonalcare.iam.interfaces.rest.transform.UserResourceFromEntityAssembler;
+import com.secureon.iam.domain.model.queries.GetAllUsersQuery;
+import com.secureon.iam.domain.model.queries.GetUserByIdQuery;
+import com.secureon.iam.domain.services.UserQueryService;
+import com.secureon.iam.interfaces.rest.resources.UserResource;
+import com.secureon.iam.interfaces.rest.transform.UserResourceFromEntityAssembler;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -19,7 +19,7 @@ import java.util.List;
 @RequestMapping(value = "/api/v1/users", produces = MediaType.APPLICATION_JSON_VALUE)
 @Tag(name = "Users", description = "User Management Endpoints")
 public class UsersController {
-   private final UserQueryService userQueryService;
+    private final UserQueryService userQueryService;
 
     public UsersController(UserQueryService userQueryService) {
         this.userQueryService = userQueryService;
@@ -37,7 +37,8 @@ public class UsersController {
     public ResponseEntity<UserResource> getUserById(@PathVariable Long userId) {
         var getUserByIdQuery = new GetUserByIdQuery(userId);
         var user = userQueryService.handle(getUserByIdQuery);
-        if (user.isEmpty()) return ResponseEntity.notFound().build();
+        if (user.isEmpty())
+            return ResponseEntity.notFound().build();
         var userResource = UserResourceFromEntityAssembler.toResourceFromEntity(user.get());
         return ResponseEntity.ok(userResource);
     }
