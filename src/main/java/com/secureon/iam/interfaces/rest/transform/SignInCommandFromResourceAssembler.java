@@ -1,7 +1,7 @@
 package com.secureon.iam.interfaces.rest.transform;
 
-import com.backend.hormonalcare.iam.domain.model.commands.SignInCommand;
-import com.backend.hormonalcare.iam.interfaces.rest.resources.SignInResource;
+import com.secureon.iam.domain.model.commands.SignInCommand;
+import com.secureon.iam.interfaces.rest.resources.SignInResource;
 
 public class SignInCommandFromResourceAssembler {
     public static SignInCommand toCommandFromResource(SignInResource resource) {
