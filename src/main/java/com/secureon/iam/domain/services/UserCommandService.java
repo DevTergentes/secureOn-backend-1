@@ -1,8 +1,8 @@
 package com.secureon.iam.domain.services;
 
-import com.backend.hormonalcare.iam.domain.model.aggregates.User;
-import com.backend.hormonalcare.iam.domain.model.commands.SignInCommand;
-import com.backend.hormonalcare.iam.domain.model.commands.SignUpCommand;
+import com.secureon.iam.domain.model.aggregates.User;
+import com.secureon.iam.domain.model.commands.SignInCommand;
+import com.secureon.iam.domain.model.commands.SignUpCommand;
 import org.apache.commons.lang3.tuple.ImmutablePair;
 
 import java.util.Optional;
