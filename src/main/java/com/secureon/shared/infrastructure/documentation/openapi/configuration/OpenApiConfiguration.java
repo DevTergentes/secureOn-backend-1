@@ -12,32 +12,28 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class OpenApiConfiguration {
-    @Bean
-    public OpenAPI learningPlatformOpenApi() {
-        // General configuration
-        var openApi = new OpenAPI();
-        openApi
-                .info(new Info()
-                        .title("ACME hormonal Care API")
-                        .description("ACME hormonal Care application REST API documentation.")
-                        .version("v1.0.0")
-                        .license(new License().name("Apache 2.0")
-                                .url("https://www.apache.org/licenses/LICENSE-2.0.html")))
-                .externalDocs(new ExternalDocumentation()
-                        .description("ACME hormonal Care Wiki Documentation")
-                        .url("https://acme-hormonal-care.wiki.github.io/docs"));
-        // Add Security Scheme
-        final String securitySchemeName = "bearerAuth";
-        openApi.addSecurityItem(new SecurityRequirement()
-                        .addList(securitySchemeName))
-                .components(new Components()
-                        .addSecuritySchemes(securitySchemeName,
-                                new SecurityScheme()
-                                        .name(securitySchemeName)
-                                        .type(SecurityScheme.Type.HTTP)
-                                        .scheme("bearer")
-                                        .bearerFormat("JWT")));
-        // Return OpenAPI configuration object*/
-        return openApi;
-    }
+        @Bean
+        public OpenAPI learningPlatformOpenApi() {
+                // General configuration
+                var openApi = new OpenAPI();
+                openApi
+                                .info(new Info()
+                                                .title("SecureOn API")
+                                                .description("SecureOn application REST API documentation.")
+                                                .version("v1.0.0")
+                                                .license(new License().name("Apache 2.0")
+                                                                .url("https://www.apache.org/licenses/LICENSE-2.0.html")))
+                                .externalDocs(new ExternalDocumentation()
+                                                .description("SecureOn Documentation")
+                                                .url("https://github.com/DevTergentes/upc-pre-202502-1asi0728-14653-DevTergentes-report-tp"));
+                // Add Security Scheme
+                final String securitySchemeName = "bearerAuth";
+                openApi.addSecurityItem(new SecurityRequirement().addList(securitySchemeName))
+                                .components(new Components().addSecuritySchemes(securitySchemeName,
+                                                new SecurityScheme().name(securitySchemeName)
+                                                                .type(SecurityScheme.Type.HTTP)
+                                                                .scheme("bearer").bearerFormat("JWT")));
+                // Return OpenAPI configuration object*/
+                return openApi;
+        }
 }
