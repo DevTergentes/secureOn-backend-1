@@ -1,8 +1,8 @@
-# 🔬 Secureon – Backend API
+# 🔬 ChemTrack – Backend API
 
-This is the official **backend service** for the secureon platform — a solution for managing and monitoring chemical inventories in laboratories, academic institutions, and industrial environments.
+This is the official **backend service** for the ChemTrack platform — a solution for managing and monitoring chemical inventories in laboratories, academic institutions, and industrial environments.
 
-It provides a secure, RESTful API for the secureon Web and Mobile apps to interact with the database, manage users, chemicals, safety data sheets, and logs of chemical handling.
+It provides a secure, RESTful API for the ChemTrack Web and Mobile apps to interact with the database, manage users, chemicals, safety data sheets, and logs of chemical handling.
 
 ---
 
@@ -25,7 +25,7 @@ It provides a secure, RESTful API for the secureon Web and Mobile apps to intera
 - ✅ Track quantities, usage logs, expiration alerts
 - ✅ Upload and link Safety Data Sheets (PDFs)
 - ✅ Audit logs for chemical handling
-- ✅ Integration-ready for secureon mobile/web clients
+- ✅ Integration-ready for ChemTrack mobile/web clients
 
 ---
 
@@ -34,5 +34,5 @@ It provides a secure, RESTful API for the secureon Web and Mobile apps to intera
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/secureon-backend.git
-cd secureon-backend
+git clone https://github.com/your-username/chemtrack-backend.git
+cd chemtrack-backend
